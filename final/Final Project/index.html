@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Personal Portal</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 30px;
+    }
+
+    .portal-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #002244;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      width: 350px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #003366;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0055aa;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .register-link a {
+      text-decoration: none;
+      color: white;
+      background-color: #008000;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .register-link a:hover {
+      background-color: #00aa00;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="portal-title">Student Personal Portal</div>
+
+  <h2>Student Login</h2>
+
+  <form method="post" action="login.php">
+    <label>Student ID:</label>
+    <input type="text" name="student_id" placeholder="Enter Student ID">
+
+    <label>Password:</label>
+    <input type="password" name="password" placeholder="Enter Password">
+
+    <button type="submit">Login</button>
+
+    <!-- Registration Button -->
+    <div class="register-link">
+      <a href="register.html">New Student? Register Here</a>
+    </div>
+  </form>
+
+</body>
+</html>
