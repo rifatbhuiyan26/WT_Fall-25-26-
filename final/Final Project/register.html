@@ -13,18 +13,33 @@
       padding: 30px;
     }
 
-    h2 {
+    /* Registration Box Container */
+    .registration-container {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 3px solid #003366; /* Blue border */
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Box for the header text */
+    .registration-box {
+      border: 2px solid #003366;
+      background-color: #e6f0ff;
+      padding: 10px 0;
       text-align: center;
+      font-weight: bold;
       color: #003366;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 20px;
     }
 
     form {
-      background: white;
-      padding: 20px;
-      width: 350px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 0;
+      margin: 0;
     }
 
     label {
@@ -56,50 +71,55 @@
       margin-top: 15px;
     }
 
-    /* Changed back button color to red */
+    /* Red back button */
     .back-link a {
       text-decoration: none;
       color: white;
-      background-color: #dc3545; /* red color */
+      background-color: #dc3545;
       padding: 8px 12px;
       border-radius: 5px;
       display: inline-block;
     }
 
     .back-link a:hover {
-      background-color: #a71d2a; /* darker red on hover */
+      background-color: #a71d2a;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Page Header -->
-  <h2>Student Registration</h2>
+  <!-- Registration Container -->
+  <div class="registration-container">
 
-  <!-- Registration Form -->
-  <form method="post" action="register.php">
-    <label>Full Name:</label>
-    <input type="text" name="name" placeholder="Enter Full Name">
+    <!-- Registration Header in Box -->
+    <div class="registration-box">Student Registration</div>
 
-    <label>Email:</label>
-    <input type="email" name="email" placeholder="Enter Email">
+    <!-- Registration Form -->
+    <form method="post" action="register.php">
+      <label>Full Name:</label>
+      <input type="text" name="name" placeholder="Enter Full Name">
 
-    <label>Phone Number:</label>
-    <input type="text" name="phone" placeholder="Enter Phone Number">
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Enter Email">
 
-    <label>Password:</label>
-    <input type="password" name="password" placeholder="Enter Password">
+      <label>Phone Number:</label>
+      <input type="text" name="phone" placeholder="Enter Phone Number">
 
-    <label>Confirm Password:</label>
-    <input type="password" name="confirm_password" placeholder="Confirm Password">
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Enter Password">
 
-    <button type="submit">Register</button>
-  </form>
+      <label>Confirm Password:</label>
+      <input type="password" name="confirm_password" placeholder="Confirm Password">
 
-  <!-- Back to Login Link -->
-  <div class="back-link">
-    <a href="index.html">Back to Login</a>
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Back to Login Link -->
+    <div class="back-link">
+      <a href="index.html">Back to Login</a>
+    </div>
+
   </div>
 
 </body>
