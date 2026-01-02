@@ -1,41 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+</head>
+<body>
+<h1>Welcome to Student Registration</h1>
+
 <?php
-// Check if form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+ 
+$name = $email = $phone = $password = $confirm_password = "";
+$nameerror = $emailerror = $phoneerror = $passworderror = $confirmpassworderror = "";
 
-    // Collect POST data
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $phone = trim($_POST['phone']);
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+ 
+function test_input($data) {
+    $data = trim($data); 
+    return $data;
+}
 
-    // Initialize errors array
-    $errors = [];
+ 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Validate fields
-    if (empty($name)) $errors[] = "Name is required.";
-    if (empty($email)) $errors[] = "Email is required.";
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email format.";
-    if (empty($phone)) $errors[] = "Phone number is required.";
-    if (!preg_match("/^\d+$/", $phone)) $errors[] = "Phone must contain digits only.";
-    if (empty($password)) $errors[] = "Password is required.";
-    if ($password !== $confirm_password) $errors[] = "Passwords do not match.";
-
-    // Display result
-    if (count($errors) > 0) {
-        echo "<h2>Registration Errors:</h2>";
-        echo "<ul>";
-        foreach($errors as $err){
-            echo "<li>$err</li>";
-        }
-        echo "</ul>";
-        echo '<a href="register.html">Go Back</a>';
+    // Name Validation
+    if (empty($_POST["name"])) {
+        $nameerror = "Name is required";
     } else {
-        echo "<h2>Registration Successful!</h2>";
-        echo "Name: $name<br>";
-        echo "Email: $email<br>";
-        echo "Phone: $phone<br>";
-        echo '<a href="index.html">Go to Login</a>';
+        $name = test_input($_POST["name"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+            $nameerror = "Only letters and white space allowed";
+        }
+    }
+
+    // Email Validation
+    if (empty($_POST["email"])) {
+        $emailerror = "Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailerror = "Invalid email format";
+        }
+    }
+
+    // Phone Validation
+    if (empty($_POST["phone"])) {
+        $phoneerror = "Phone number is required";
+    } else {
+        $phone = test_input($_POST["phone"]);
+        if (!preg_match("/^\d+$/", $phone)) {
+            $phoneerror = "Only digits allowed";
+        }
+    }
+
+    // Password Validation
+    if (empty($_POST["password"])) {
+        $passworderror = "Password is required";
+    } else {
+        $password = $_POST["password"];
+    }
+
+    // Confirm Password Validation
+    if (empty($_POST["confirm_password"])) {
+        $confirmpassworderror = "Confirm password is required";
+    } else {
+        $confirm_password = $_POST["confirm_password"];
+        if ($password !== $confirm_password) {
+            $confirmpassworderror = "Passwords do not match";
+        }
     }
 }
 ?>
+
+<form method="post" action="">
+    <label>Name:</label>
+    <input type="text" name="name" value="<?php echo $name; ?>">
+    <span style="color:red;"><?php echo $nameerror; ?></span><br><br>
+
+    <label>Email:</label>
+    <input type="text" name="email" value="<?php echo $email; ?>">
+    <span style="color:red;"><?php echo $emailerror; ?></span><br><br>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" value="<?php echo $phone; ?>">
+    <span style="color:red;"><?php echo $phoneerror; ?></span><br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password">
+    <span style="color:red;"><?php echo $passworderror; ?></span><br><br>
+
+    <label>Confirm Password:</label>
+    <input type="password" name="confirm_password">
+    <span style="color:red;"><?php echo $confirmpassworderror; ?></span><br><br>
+
+    <input type="submit" name="submit" value="Register">
+</form>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && 
+    empty($nameerror) && empty($emailerror) && empty($phoneerror) && empty($passworderror) && empty($confirmpassworderror)) {
+
+    echo "<h3>Registration Successful!</h3>";
+    echo "Name: ".$name."<br>";
+    echo "Email: ".$email."<br>";
+    echo "Phone: ".$phone."<br>";
+}
+?>
+
+</body>
+</html>
