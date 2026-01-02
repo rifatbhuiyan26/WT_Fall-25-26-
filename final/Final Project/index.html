@@ -38,9 +38,17 @@
       margin-bottom: 20px;
     }
 
-    h2 {
+    /* Student Login Box */
+    .login-box {
+      border: 2px solid #003366;
+      background-color: #e6f0ff;
+      padding: 10px 0;
       text-align: center;
+      font-weight: bold;
       color: #003366;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 20px;
     }
 
     form {
@@ -100,9 +108,10 @@
     <div class="portal-title">Student Personal Portal</div>
     <div class="portal-label">Welcome! Please login with your student ID and password.</div>
 
-    <!-- Login Section -->
-    <h2>Student Login</h2>
+    <!-- Student Login Box -->
+    <div class="login-box">Student Login</div>
 
+    <!-- Login Form -->
     <form method="post" action="login.php">
       <label>Student ID:</label>
       <input type="text" name="student_id" placeholder="Enter Student ID">
