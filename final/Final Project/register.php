@@ -23,8 +23,7 @@ function test_input($data) {
 
  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Name Validation
+ 
     if (empty($_POST["name"])) {
         $nameerror = "Name is required";
     } else {
@@ -34,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Email Validation
+   
     if (empty($_POST["email"])) {
         $emailerror = "Email is required";
     } else {
@@ -44,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Phone Validation
+ 
     if (empty($_POST["phone"])) {
         $phoneerror = "Phone number is required";
     } else {
@@ -54,14 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Password Validation
+   
     if (empty($_POST["password"])) {
         $passworderror = "Password is required";
     } else {
         $password = $_POST["password"];
     }
 
-    // Confirm Password Validation
+    
     if (empty($_POST["confirm_password"])) {
         $confirmpassworderror = "Confirm password is required";
     } else {
@@ -120,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
         echo "All fields are required!";
     }
 }
-$conn->close();
+
 ?>
 
 
