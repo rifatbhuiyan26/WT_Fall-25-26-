@@ -13,18 +13,6 @@
       padding: 30px;
     }
 
-    /* Registration Container with top & bottom border only */
-    .registration-container {
-      max-width: 400px;
-      margin: auto;
-      padding: 20px;
-      border-top: 3px solid #003366; /* top border */
-      border-bottom: 3px solid #003366; /* bottom border */
-      border-radius: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
     /* Box for the header text */
     .registration-box {
       border: 2px solid #003366;
@@ -36,11 +24,18 @@
       border-radius: 8px;
       margin-bottom: 20px;
       font-size: 20px;
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     form {
-      padding: 0;
-      margin: 0;
+      background: white;
+      padding: 20px;
+      width: 350px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     label {
@@ -90,37 +85,32 @@
 
 <body>
 
-  <!-- Registration Container -->
-  <div class="registration-container">
+  <!-- Registration Header in Box -->
+  <div class="registration-box">Student Registration</div>
 
-    <!-- Registration Header in Box -->
-    <div class="registration-box">Student Registration</div>
+  <!-- Registration Form -->
+  <form method="post" action="register.php">
+    <label>Full Name:</label>
+    <input type="text" name="name" placeholder="Enter Full Name">
 
-    <!-- Registration Form -->
-    <form method="post" action="register.php">
-      <label>Full Name:</label>
-      <input type="text" name="name" placeholder="Enter Full Name">
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter Email">
 
-      <label>Email:</label>
-      <input type="email" name="email" placeholder="Enter Email">
+    <label>Phone Number:</label>
+    <input type="text" name="phone" placeholder="Enter Phone Number">
 
-      <label>Phone Number:</label>
-      <input type="text" name="phone" placeholder="Enter Phone Number">
+    <label>Password:</label>
+    <input type="password" name="password" placeholder="Enter Password">
 
-      <label>Password:</label>
-      <input type="password" name="password" placeholder="Enter Password">
+    <label>Confirm Password:</label>
+    <input type="password" name="confirm_password" placeholder="Confirm Password">
 
-      <label>Confirm Password:</label>
-      <input type="password" name="confirm_password" placeholder="Confirm Password">
+    <button type="submit">Register</button>
+  </form>
 
-      <button type="submit">Register</button>
-    </form>
-
-    <!-- Back to Login Link -->
-    <div class="back-link">
-      <a href="index.html">Back to Login</a>
-    </div>
-
+  <!-- Back to Login Link -->
+  <div class="back-link">
+    <a href="index.html">Back to Login</a>
   </div>
 
 </body>
