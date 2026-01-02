@@ -1,3 +1,7 @@
+<?php
+include "db.php";  // database connection
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,15 +99,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && 
-    empty($nameerror) && empty($emailerror) && empty($phoneerror) && empty($passworderror) && empty($confirmpassworderror)) {
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $password = $_POST["password"];
 
-    echo "<h3>Registration Successful!</h3>";
-    echo "Name: ".$name."<br>";
-    echo "Email: ".$email."<br>";
-    echo "Phone: ".$phone."<br>";
+    if(!empty($name) && !empty($email) && !empty($phone) && !empty($password)) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO students(name, email, phone, password)
+                VALUES ('$name', '$email', '$phone', '$hashedPassword')";
+
+        if($conn->query($sql)) {
+            echo "Registration Successful!";
+        } else {
+            echo "Error: " . $conn->error;
+        }
+    } else {
+        echo "All fields are required!";
+    }
 }
+$conn->close();
 ?>
+
+
 
 </body>
 </html>
