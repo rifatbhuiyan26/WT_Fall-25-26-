@@ -89,7 +89,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="color: #003366;">Processing Login...</p>
         <p>Please wait a moment.</p>
     <?php endif; ?>
-  </div>
+  
+
+
+
+
+</div>
 
 </BODY>
-</HTML>
+</HTML> 
