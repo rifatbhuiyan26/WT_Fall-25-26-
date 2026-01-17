@@ -1,6 +1,6 @@
 <?php
 session_start();
-// User login na thakle login page-e pathabe
+ 
 if (!isset($_SESSION['user_id'])) {
     header("Location: view/login.html");
     exit();
