@@ -1,0 +1,127 @@
+/* General Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f0f2f5;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: #003366; /* AIUB Blue */
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+}
+
+.logo h2 {
+    color: #ffcc00; /* AIUB Yellow */
+    text-align: center;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+.user-info {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.user-info h3 { margin: 5px 0; color: #ffcc00; }
+
+nav a, .btn-sidebar {
+    display: block;
+    color: #cbd5e0;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav a:hover, .btn-sidebar:hover {
+    background-color: #1a4d80;
+    color: white;
+}
+
+.active { background-color: #1a4d80; color: white !important; }
+
+.logout-link {
+    color: #ff8080 !important;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 300px;
+    padding: 40px;
+    width: calc(100% - 300px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-stats { display: flex; gap: 20px; }
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    min-width: 150px;
+    border-top: 4px solid #ffcc00;
+}
+
+/* Table Design */
+.content-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th { background-color: #f8f9fa; color: #4a5568; }
+
+/* Notice Section */
+.notice-btn {
+    margin-top: 25px;
+    background-color: #ffcc00;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.notice-box {
+    display: none;
+    background-color: #fff3cd;
+    border-left: 6px solid #856404;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}

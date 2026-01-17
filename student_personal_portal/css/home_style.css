@@ -1,0 +1,290 @@
+/* ==========================================================================
+   Project: AIUB Official Home Page (Premium Look)
+   Author: [Your Name]
+   Theme: Navy Blue & Gold (Premium Aesthetic)
+   ========================================================================== */
+
+/* --- 1. Reset & Core Styling --- */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Modern Font */
+    background-color: #ffffff;
+    color: #2d3436;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 88%;
+    margin: 0 auto;
+}
+
+/* --- 2. Top Bar (Professional Contact) --- */
+.top-bar {
+    background: #001a33;
+    color: #e0e0e0;
+    padding: 10px 0;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.top-bar span {
+    margin-right: 25px;
+}
+
+.top-bar i {
+    color: #ffcc00; /* Gold Icon */
+    margin-right: 5px;
+}
+
+/* --- 3. Premium Header & Navbar --- */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px); /* Premium Blur Effect */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: rotate(5deg);
+}
+
+.logo-text {
+    margin-left: 12px;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    color: #003366;
+    margin: 0;
+    font-weight: 800;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: #777;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Nav Links */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #003366;
+}
+
+/* Go to Portal Button (Premium Shape) */
+.portal-btn {
+    background: linear-gradient(135deg, #003366, #00509d);
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 50px; /* Capsule Shape */
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+}
+
+.portal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+    background: #ffcc00 !important;
+    color: #003366 !important;
+}
+
+/* --- 4. Hero Section (Visual Masterpiece - UPDATED FOR LOCAL IMAGE) --- */
+.hero {
+    height: 80vh;
+    /* --- CHANGED THIS LINE TO YOUR LOCAL IMAGE --- */
+    background: url('../image/campus.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.hero-overlay {
+    /* Overlay একটু গাঢ় করা হয়েছে যাতে ছবি উজ্জ্বল হলেও লেখা পরিষ্কার বোঝা যায় */
+    background: linear-gradient(to right, rgba(0, 20, 40, 0.8), rgba(0, 20, 40, 0.3));
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+    padding-left: 6%;
+}
+
+.hero-content h2 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* টেক্সট শ্যাডো যোগ করা হয়েছে */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.main-btn {
+    background: #ffcc00;
+    color: #003366;
+    padding: 16px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.secondary-btn {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.main-btn:hover, .secondary-btn:hover {
+    transform: scale(1.05);
+    background: #fff;
+    color: #003366;
+}
+
+/* --- 5. Features Section --- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 0;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.feature-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.1);
+}
+
+.feature-card i {
+    font-size: 45px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* --- 6. Notice Board --- */
+.notices {
+    background: #fdfdfd;
+    padding: 50px;
+    border-radius: 25px;
+    border-left: 8px solid #ffcc00;
+    margin-bottom: 80px;
+}
+
+.notice-box h3 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 25px;
+}
+
+.notice-box ul {
+    list-style: none;
+}
+
+.notice-box li {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.notice-box a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.notice-box a:hover {
+    color: #003366;
+    padding-left: 10px;
+}
+
+/* --- 7. Footer --- */
+footer {
+    background: #000b14;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-info h4 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #111;
+    padding-top: 25px;
+    font-size: 13px;
+    color: #666;
+}

@@ -1,0 +1,76 @@
+/* style.css - Login Page Design */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f0f8ff; /* Light Blue Background */
+}
+
+h2 {
+  text-align: center;
+  color: #003366; /* Navy Blue Color */
+}
+
+form {
+  background-color: #ffffff; /* White Form Box */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Padding thik rakhar jonno */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+
+#error {
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+  font-size: 13px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.register-link a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
