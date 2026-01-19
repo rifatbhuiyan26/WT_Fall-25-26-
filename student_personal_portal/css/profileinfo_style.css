@@ -1,0 +1,99 @@
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+ 
+.profile-card {
+    background: white;
+    padding: 35px;
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-top: 6px solid #ffcc00;  
+}
+
+.profile-card h2 {
+    text-align: center;
+    color: #003366; 
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,51,102,0.2);
+}
+
+.btn-group {
+    margin-top: 25px;
+}
+
+ 
+.btn-update {
+    background-color: #003366;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-update:hover { background-color: #001a33; }
+
+
+.btn-delete {
+    background-color: transparent;
+    color: #ff4d4d;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff4d4d;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.btn-delete:hover { background-color: #ff4d4d; color: white; }
+
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
